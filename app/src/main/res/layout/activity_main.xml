@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/appBarLayout"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@color/colorPrimary"
+                    app:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+                    app:title="@string/app_name"
+                    app:titleTextColor="@android:color/white">
+
+                    <ImageView
+                        android:id="@+id/imageView_menu"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:padding="8dp"
+                        android:layout_gravity="end|center"
+                        android:layout_marginEnd="5dp"
+                        android:src="@drawable/menu_popup_icon"
+                        android:background="?android:attr/selectableItemBackgroundBorderless"
+                        android:scaleType="centerInside"
+                        android:onClick="onClick"/>
+
+                </android.support.v7.widget.Toolbar>
+            </android.support.design.widget.AppBarLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/appBarLayout">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerView_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="vertical"
+                    android:fadeScrollbars="true">
+                </android.support.v7.widget.RecyclerView>
+
+                <TextView
+                    android:id="@+id/textView_nothing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="没有记录"
+                    android:textSize="20sp"
+                    android:onClick="onClick"/>
+
+            </FrameLayout>
+
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/drawer_layout"/>
+
+    </android.support.v4.widget.DrawerLayout>
+</layout>

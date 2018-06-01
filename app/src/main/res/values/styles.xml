@@ -1,0 +1,17 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--状态栏带背景颜色-->
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <!--状态栏背景颜色-->
+        <item name="android:statusBarColor">@color/translucent</item>
+        <!--使侧栏适应全屏-->
+        <item name="android:fitsSystemWindows">true</item>
+    </style>
+
+</resources>
